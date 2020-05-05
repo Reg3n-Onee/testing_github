@@ -1,3 +1,3 @@
 <?php
-echo "ending email";
+echo "another email";
 ?>
