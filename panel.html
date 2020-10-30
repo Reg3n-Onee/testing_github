@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel</title>
+    <style>
+        .bar{
+            list-style: none;
+            margin: 0;
+            padding: 10px 10px 0 10px;
+            background: red;
+            overflow: hidden;
+        }
+        .bar li{
+            float: left;
+            padding: 8px 20px;
+            cursor: pointer;
+            margin-right: 8px;
+            background: white;
+        }
+        .panel{
+            height: 200px;
+            border: 1px solid red;
+            border-top: 0 none;
+            padding: 10px;
+        }
+        #tab2{
+            opacity: 0.5;
+        }
+        #panel2{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="bar">
+        <li id="tab1" onClick="one()">Tab One</li>
+        <li id="tab2" onClick="two()">Tab Two</li>
+    </ul>
+    <div id="panel1" class="panel">Content One</div>
+    <div id="panel2" class="panel">Content Two</div>
+    <script>
+        function get(obj){
+            return document.getElementById(obj);
+        }
+        function one(){
+            get("tab1").style.opacity=1;
+            get("tab2").style.opacity=0.5;
+            get("panel1").style.display="block";
+            get("panel2").style.display="none";
+        }
+        function two(){
+            get("tab1").style.opacity=0.5;
+            get("tab2").style.opacity=1;
+            get("panel1").style.display="none";
+            get("panel2").style.display="block";
+        }
+    </script>
+</body>
+</html>
